@@ -1,6 +1,6 @@
 import os
 import importlib
-import modelnet_h5_dataset
+import modelnet_dataset
 import numpy as np
 import tensorflow as tf
 from datetime import datetime
@@ -25,8 +25,8 @@ class PointNet():
         self.bn_decay_rate = 0.5
         self.bn_decay_step = float(self.decay_step)
         self.bn_decay_clip = 0.99
-        self.self.train_dataset = modelnet_h5_dataset.ModelNetH5Dataset(self.train_dir, self.self.batch_size, self.self.num_point, shuffle=True)
-        self.test_dataset = modelnet_h5_dataset.ModelNetH5Dataset(self.val_dir, self.self.batch_size, self.self.num_point, shuffle=False)
+        self.train_dataset = modelnet_dataset.ModelNetDataset(self.train_dir, self.self.batch_size, self.self.num_point, shuffle=True)
+        self.test_dataset = modelnet_dataset.ModelNetDataset(self.val_dir, self.self.batch_size, self.self.num_point, shuffle=False)
 # self.batch_size = 16
 # self.num_point = 40*17
 # MAX_EPOCH = 251
