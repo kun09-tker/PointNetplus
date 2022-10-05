@@ -133,9 +133,9 @@ env.bak/
 venv.bak/
 
 # File
-
 AlphaPoseSkeleton
 test.ipynb
+**.zip
 
 # Spyder project settings
 .spyderproject
